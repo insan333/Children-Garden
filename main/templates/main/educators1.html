@@ -1,0 +1,16 @@
+{% extends 'main/main.html' %}
+{% block content %}
+<a href="http://localhost:8000/">Gardens</a>
+{% for educator in educators %}
+<div class="col-3">
+    <div class="card" style="width:20em;">
+        <div class="card-body">
+            <h4 class="card-title">{{educator.first_name}} {{educator.last_name}}</h4>
+            <p class="card-text">Age:{{educator.age}}</p>
+            <p class="card-text">Gender:{{educator.gender}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}
